@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./navbar.css";
 
-import CartWidget from '../CartWidget'
+import CartWidget from "../CartWidget";
 
 function NavBar() {
   return (
