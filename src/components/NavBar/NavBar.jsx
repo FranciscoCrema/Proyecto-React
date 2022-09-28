@@ -26,9 +26,6 @@ function NavBar() {
               <Nav.Link href="#pricing" id="color">
                 Contacto
               </Nav.Link>
-              <Nav.Link href="#pricing" id="color">
-                Contacto
-              </Nav.Link>
             </Nav>
 
             <Nav>
