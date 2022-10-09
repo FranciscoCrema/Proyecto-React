@@ -1,5 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .text {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
+
+
+/* retoques del ItemCount */

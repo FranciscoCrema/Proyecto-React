@@ -1,18 +1,25 @@
-import NavBar from "./components/NavBar/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ItemListContainer from "./components/ItemList/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
+import ItemListContainer from "./components/Main/ItemListContainer";
+import ItemCount from "./components/Main/ItemCount";
 
 function App() {
   return (
     <>
       <NavBar
-        logo="logo"
-        inicio="inicio"
-        productos="productos"
-        contacto="contacto"
+        logo="Lauvi"
+        inicio="Inicio"
+        productos="Productos"
+        contacto="Contacto"
       />
 
-      <ItemListContainer />
+      <main>
+        <ItemListContainer saludo="Bienvenido a Lauvi" />
+        <ItemCount stock={10}  inicio={1} />
+      </main>
+
+      <Footer />
     </>
   );
 }
