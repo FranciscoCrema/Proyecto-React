@@ -3,6 +3,10 @@
 }
 
 /* Icono del Carrito */
+.widget-container span{
+  margin-left: 10px;
+}
+
 #icono {
   color: #ffcd38;
 }

@@ -19,7 +19,7 @@ const ItemCount = ({ stock, inicio }) => {
   };
  
   return (
-    <div className="container">
+    <div className="contenedor">
       <div className="container-btn">
         <div className="menos">
           <button onClick={restar}>-</button>

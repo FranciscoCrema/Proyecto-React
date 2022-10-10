@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,5 +9,45 @@
   margin-top: 20px;
 }
 
-
 /* retoques del ItemCount */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  width: 110px;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* ItemList.jsx */
+/* Aca configuro todos los productos que se vayan agregando */
+.item-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+/* ---------------------------------------------------------------- */
+/* Item.jsx */
+.cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-1 img {
+  width: 270px;
+  max-height: 170px;
+}
+
+
+.card-btn {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
