@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/Main/ItemListContainer";
-import ItemCount from "./components/Main/ItemCount";
+import ItemDetailContainer from "./components/Main/ItemDetailContainer";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
       <main>
         <ItemListContainer saludo="Bienvenido a Lauvi" />
-        <ItemCount stock={10}  inicio={1} />
+        <ItemDetailContainer />
       </main>
 
       <Footer />
