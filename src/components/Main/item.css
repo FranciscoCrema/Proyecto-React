@@ -32,30 +32,58 @@
 .item-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  box-shadow: 0px 0px 10px 1px greenyellow;
+  box-shadow: 0px 0px 10px 1px #00af91;
+  align-items: center;
+  justify-items: center;
 }
 
 /* ---------------------------------------------------------------- */
 /* Item.jsx */
 .cards {
-  margin-top: 40px;
+  margin-top: 25px;
+  width: 250px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px 2px gray;
+}
+
+.card-1 img {
+  max-width: 250px;
+  height: auto;
+}
+
+.card-info h3 {
   display: flex;
   justify-content: center;
 }
 
-.card-1 img {
-  width: 240px;
-  max-height: 170px;
+.card-info p {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.card-info .card-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .card-btn {
+  font-size: 20px;
   text-decoration: none;
-  color: black;
+  background-color: #191a19;
+  color: #eef1ff;
   width: 100%;
   height: auto;
-  box-shadow: 0px 0px 10px 2px gray;
+  box-shadow: 0px 0px 10px 4px gray;
   border-radius: 5px;
+  transition: 0.5s;
+}
+
+.card-btn:hover {
+  color: #0096ff;
 }
 
 /* ----------------------------------------------------------- */

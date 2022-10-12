@@ -27,7 +27,7 @@ export const products = [
     titulo: "Camiseta de Boca",
     precio: 14500,
     category: 'productos',
-    img: "https://deportshow.com.ar/media/catalog/product/cache/40a3bea3894bde5ca2d5decacfe57986/g/a/ga7544_app_photo_front_white_1.jpg",
+    img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/312/744/products/camiseta_titular_boca_juniors_21-22_azul_ga7545_01_laydown1-2340d17a9a8fe3446816351890348033-1024-1024.png",
   },
   {
     id: 5,
