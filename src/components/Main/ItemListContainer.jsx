@@ -17,7 +17,7 @@ const ItemListContainer = () => {
         );
         setTimeout(() => {
           res(categoryName ? prodFiltrados : products);
-        }, 2000);
+        }, 300);
       });
     };
     traerProductos()
