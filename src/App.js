@@ -20,7 +20,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Inicio saludo="Bienvenido a una tienda totalmente dedicada a las camisetas de Fotbol" />
+            <Inicio saludo="Bienvenido a una tienda totalmente dedicada a la venta de camisetas de Fotbol" />
           }
         />
         <Route path="/productos" element={<ItemListContainer />} />
