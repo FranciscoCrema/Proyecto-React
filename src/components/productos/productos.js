@@ -1,22 +1,46 @@
 export const products = [
   {
     id: 1,
-    titulo: "Manzanas",
-    precio: 400,
-    img: "https://media.istockphoto.com/photos/dehydrated-apple-chips-picture-id618647832?k=20&m=618647832&s=612x612&w=0&h=-siYHgb7PpOY73DEQZAtBK055mXgh9eyuCYQ7E1H3OI=",
+    titulo: "Camiseta de Argentina",
+    precio: 17500,
+    category: 'productos',
+    img: "https://www.afashop.com.ar/ccstore/v1/images/?source=/file/v6567973533279150603/products/HL8425_FR_Torso_ecom-0.jpg",
   },
 
   {
     id: 2,
-    titulo: "Nueces",
-    precio: 300,
-    img: "https://media.istockphoto.com/photos/walnuts-isolated-against-white-picture-id518524071?k=20&m=518524071&s=612x612&w=0&h=wFmjBJ0Pw3jPpTNaSdqtM9J8HBTkENo0iW6PiTM9m7E=",
+    titulo: "Camiseta de Juventus",
+    precio: 13000,
+    category: 'productos',
+    img: "https://assets-es.imgfoot.com/media/cache/800x800/juventuslocal2223-62822789ec965.jpg",
   },
 
   {
     id: 3,
-    titulo: "Almendras",
-    precio: 350,
-    img: "https://images.unsplash.com/photo-1615485737457-f07082c77813?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    titulo: "Camiseta de Newells",
+    precio: 13000,
+    category: 'productos',
+    img: "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwc73dbb89/products/GV_NOB22010110121/GV_NOB22010110121-1.JPG",
+  },
+  {
+    id: 4,
+    titulo: "Camiseta de Boca",
+    precio: 14500,
+    category: 'productos',
+    img: "https://deportshow.com.ar/media/catalog/product/cache/40a3bea3894bde5ca2d5decacfe57986/g/a/ga7544_app_photo_front_white_1.jpg",
+  },
+  {
+    id: 5,
+    titulo: "Camiseta de River",
+    precio: 14000,
+    category: 'productos',
+    img: "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/G/U/GU9601_0.jpg",
+  },
+  {
+    id: 6,
+    titulo: "Camiseta de Argentina-2",
+    precio: 17000,
+    category: 'productos',
+    img: "https://todosobrecamisetas.com/wp-content/uploads/camiseta-suplente-adidas-argentina-2022-1-1.jpg",
   },
 ];

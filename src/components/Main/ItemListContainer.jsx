@@ -2,15 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./item.css";
 import ItemList from "./ItemList";
 import { products } from "../productos/productos";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ saludo }) => {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+
+  const { categoryName } = useParams();
 
   useEffect(() => {
     const traerProductos = () => {
       return new Promise((res, rej) => {
+        const prodFiltrados = products.filter(
+          (prod) => prod.category === "categoryName"
+        );
         setTimeout(() => {
-          res(products);
+          res(categoryName ? prodFiltrados : products);
         }, 2000);
       });
     };
@@ -21,13 +27,12 @@ const ItemListContainer = ({ saludo }) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [categoryName]);
 
   return (
-    <div className="item-list-container">
-      <h3 className="text"> {saludo} </h3>
-      <ItemList items={items} />
-    </div>
+    <>
+    <ItemList items={items} />
+    </>
   );
 };
 

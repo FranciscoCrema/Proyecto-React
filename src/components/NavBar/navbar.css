@@ -2,17 +2,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
 }
 
-#color {
-  color: #ffcd38;
+#logo{
+  color: #00af91;
+  font-size: 25px;
 }
 
-/* Icono del Carrito */
-.widget-container span{
-  margin-left: 10px;
+#inicio .contenido header {
+  background-color: #181818;
+  width: 100%;
+  top: 0;
+}
+
+#inicio .contenido header .contenido-header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#inicio .contenido header .contenido-header a {
+  text-decoration: none;
+}
+
+#inicio .contenido header .contenido-header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+#inicio .contenido header .contenido-header nav ul li{
+  font-size: 22.5px;
+}
+
+#inicio .contenido header .contenido-header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 25px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+#inicio .contenido header .contenido-header nav ul a:hover {
+  color: #00af91;
 }
 
 #icono {
-  color: #ffcd38;
+  color: #00af91;
+}
+
+#icono span{
+  margin-left: 10px;
 }
