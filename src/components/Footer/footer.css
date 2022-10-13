@@ -1,0 +1,21 @@
+footer {
+  margin-top: 25px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+footer b {
+  color: #00af91;
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin: 5px;
+  font-size: 26px;
+  transition: 0.5s;
+}
+footer a:hover {
+  color: #00af91;
+}
