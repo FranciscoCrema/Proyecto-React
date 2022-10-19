@@ -3,7 +3,7 @@ import "./item.css";
 
 // Aca esta la funcion para agregar mas cantidad de un producto o no
 
-const ItemCount = ({ stock, inicio }) => {
+const ItemCount = ({ stock, inicio, prueba }) => {
   const [count, setCount] = useState(0);
 
   const sumar = () => {
@@ -17,7 +17,6 @@ const ItemCount = ({ stock, inicio }) => {
       setCount(count - 1);
     }
   };
- 
   return (
     <div className="contenedor">
       <div className="container-btn">
@@ -29,7 +28,14 @@ const ItemCount = ({ stock, inicio }) => {
           <button onClick={sumar}>+</button>
         </div>
       </div>
-      <button className="add-btn">Agregar al carrito</button>
+      <button
+        onClick={() => {
+          prueba(count);
+        }}
+        className="add-btn"
+      >
+        Agregar al carrito
+      </button>
     </div>
   );
 };
