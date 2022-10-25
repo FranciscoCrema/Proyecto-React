@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ item }) => {
+  const [unidades, setUnidades] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
+
   const prueba = (numero) => {
-    console.log(numero);
+    setUnidades(numero);
+    addToCart(item, numero);
   };
 
   return (
@@ -15,7 +22,11 @@ const ItemDetail = ({ item }) => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ex.
           Culpa impedit maxime dolorum aliquam et illo labore esto.
         </p>
-        <ItemCount prueba={prueba} stock={20} inicio={1} />
+        {unidades === 0 ? (
+          <ItemCount prueba={prueba} stock={20} inicio={1} />
+        ) : (
+          <Link to={"/cart"}>Ir al carrito</Link>
+        )}
       </div>
     </div>
   );
