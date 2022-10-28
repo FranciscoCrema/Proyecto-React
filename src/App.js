@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/Main/ItemListContainer";
@@ -16,17 +15,17 @@ function App() {
         <NavBar
           logo="/Futbol-Club/"
           inicio="Inicio"
-          productos="Productos"
+          camisetas="Camisetas"
+          buzos="Buzo"
           contacto="Contacto"
         />
         <Routes>
           <Route
             path="/"
             element={
-              <Inicio saludo="Bienvenido a una tienda totalmente dedicada a la venta de camisetas de Fotbol" />
+              <Inicio saludo="Bienvenido a una tienda totalmente dedicada a la venta de indumentaria de Futbol" />
             }
           />
-          <Route path="/productos" element={<ItemListContainer />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route
             path="/category/:categoryName"

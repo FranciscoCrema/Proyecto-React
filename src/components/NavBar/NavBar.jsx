@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import CartWidget from "../NavBar/CartWidget";
 
-function NavBar({ logo, inicio, productos, contacto }) {
+function NavBar({ logo, inicio, camisetas, buzos, contacto }) {
   return (
     <>
       <header>
@@ -21,7 +21,10 @@ function NavBar({ logo, inicio, productos, contacto }) {
                       <NavLink to={"/"}>{inicio}</NavLink>
                     </li>
                     <li>
-                      <NavLink to={"/productos"}>{productos}</NavLink>
+                      <NavLink to={"/category/camisetas"}>{camisetas}</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={"/category/buzo"}>{buzos}</NavLink>
                     </li>
                     <li>
                       <NavLink to={"/contacto"}>{contacto}</NavLink>

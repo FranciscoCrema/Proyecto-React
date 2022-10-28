@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const traerProducto = () => {
-      return new Promise((res, rej) => {
+      return new Promise((res) => {
         const producto = products.find((prod) => prod.id === Number(id));
         setTimeout(() => {
           res(producto);

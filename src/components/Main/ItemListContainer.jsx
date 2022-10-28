@@ -11,9 +11,9 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const traerProductos = () => {
-      return new Promise((res, rej) => {
+      return new Promise((res) => {
         const prodFiltrados = products.filter(
-          (prod) => prod.category === "categoryName"
+          (prod) => prod.categoria === categoryName
         );
         setTimeout(() => {
           res(categoryName ? prodFiltrados : products);
