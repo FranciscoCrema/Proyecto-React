@@ -3,9 +3,11 @@ import "./item.css";
 import ItemList from "./ItemList";
 import { products } from "../productos/productos";
 import { useParams } from "react-router-dom";
+import SyncLoader from "react-spinners/SyncLoader";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  const [recarga, setRecarga] = useState(true);
 
   const { categoryName } = useParams();
 
@@ -17,7 +19,7 @@ const ItemListContainer = () => {
         );
         setTimeout(() => {
           res(categoryName ? prodFiltrados : products);
-        }, 300);
+        }, 500);
       });
     };
     traerProductos()
@@ -26,12 +28,21 @@ const ItemListContainer = () => {
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setRecarga(false);
       });
+
+    return () => setRecarga(true);
   }, [categoryName]);
+
+  if (recarga) {
+    return <SyncLoader />;
+  }
 
   return (
     <>
-    <ItemList items={items} />
+      <ItemList items={items} />
     </>
   );
 };
