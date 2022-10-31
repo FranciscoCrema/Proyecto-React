@@ -9,22 +9,22 @@ const Provider = ({ children }) => {
     const producto = { ...item, cantidad };
 
     if (dentroDelCarro(producto.id)) {
-      sumarCantidad(producto);
+      sumaCantidadTodo(producto);
     } else {
       setCart([...cart, producto]);
     }
   };
 
-  const sumarCantidad = (prodAgregado) => {
-    const carritoActualizado = cart.map((prodDelCart) => {
-      if (prodDelCart.id === prodAgregado.id) {
-        const prodActualizado = {
-          ...prodDelCart,
-          cantidad: prodDelCart.cantidad + prodAgregado.cantidad,
+  const sumaCantidadTodo = (prodAgregado) => {
+    const carritoActualizado = cart.map((productoDelCart) => {
+      if (productoDelCart.id === prodAgregado.id) {
+        const productosActualizados = {
+          ...productoDelCart,
+          cantidad: productoDelCart.cantidad + prodAgregado.cantidad,
         };
-        return prodActualizado;
+        return productosActualizados;
       } else {
-        return prodDelCart;
+        return productoDelCart;
       }
     });
 
@@ -36,10 +36,9 @@ const Provider = ({ children }) => {
   const borrarTodo = () => setCart([]);
 
   const borrarUno = (id) => {
-    const prodFiltrado = cart.filter((prod) => prod.id !== id)
-    setCart(prodFiltrado)
+    const prodFiltrado = cart.filter((prod) => prod.id !== id);
+    setCart(prodFiltrado);
   };
-
 
   return (
     <CartContext.Provider value={{ cart, addToCart, borrarTodo, borrarUno }}>
