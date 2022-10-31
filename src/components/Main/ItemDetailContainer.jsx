@@ -3,7 +3,7 @@ import "./item.css";
 import ItemDetail from "./ItemDetail";
 import { products } from "../productos/productos";
 import { useParams } from "react-router-dom";
-import SyncLoader from "react-spinners/SyncLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
@@ -33,7 +33,14 @@ const ItemDetailContainer = () => {
   });
 
   if (recarga) {
-    return <SyncLoader />;
+    return (
+      <div className="item-contenedor">
+        <h3>Cargando</h3>
+        <div className="item-recarga">
+          <PulseLoader />
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -1,24 +1,25 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "./cart.css";
 
 const Cart = () => {
   const { cart, borrarTodo, borrarUno } = useContext(CartContext);
 
+  if (cart.length === 0) {
+    return (
+      <div className="texto">
+        <h3>No tiene ningun producto agregado</h3>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className="contenedor-todo">
       {cart.map((prod) => (
-        <div
-          key={prod.id}
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px",
-            margin: "10px",
-          }}
-        >
+        <div className="descripcion-prod" key={prod.id}>
           <img src={prod.img} alt={prod.titulo} width="80px" />
-          <div style={{ display: "flex", alignItems: "center" }}>
+
+          <div className="descripcion-final">
             <h2>{prod.titulo}</h2>
             <h3>$ {prod.precio}</h3>
             <h4>Cantidad: {prod.cantidad}</h4>
@@ -28,8 +29,10 @@ const Cart = () => {
           <button onClick={() => borrarUno(prod.id)}>Borarr</button>
         </div>
       ))}
-      <h2>Total: $0</h2>
-      <button onClick={borrarTodo}>Borrar todo el carrito</button>
+      <div className="precio-total">
+        <h2>Total: $0 </h2>
+        <button onClick={borrarTodo}>Borrar todo el carrito</button>
+      </div>
     </div>
   );
 };

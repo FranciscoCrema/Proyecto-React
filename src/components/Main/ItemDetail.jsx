@@ -25,7 +25,9 @@ const ItemDetail = ({ item }) => {
         {unidades === 0 ? (
           <ItemCount prueba={prueba} stock={20} inicio={1} />
         ) : (
-          <Link to={"/cart"}>Ir al carrito</Link>
+          <Link to={"/cart"} className="btn-carrito">
+            Ir al carrito
+          </Link>
         )}
       </div>
     </div>

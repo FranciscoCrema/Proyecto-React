@@ -40,7 +40,6 @@ const Provider = ({ children }) => {
     setCart(prodFiltrado)
   };
 
-  //console.log(cart);
 
   return (
     <CartContext.Provider value={{ cart, addToCart, borrarTodo, borrarUno }}>
