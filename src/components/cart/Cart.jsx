@@ -23,7 +23,7 @@ const Cart = () => {
             <h2>{prod.titulo}</h2>
             <h3>$ {prod.precio}</h3>
             <h4>Cantidad: {prod.cantidad}</h4>
-            <h5>Subtotal: ${prod.precio * prod.cantidad}</h5>
+            <h3>Subtotal: ${prod.precio * prod.cantidad}</h3>
           </div>
 
           <button onClick={() => borrarUno(prod.id)}>Borarr</button>
