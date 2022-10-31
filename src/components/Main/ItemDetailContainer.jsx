@@ -50,22 +50,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-// const traerProducto = () => {
-//   return new Promise((res) => {
-//     const producto = products.find((prod) => prod.id === Number(id));
-//     setTimeout(() => {
-//       res(producto);
-//     }, 500);
-//   });
-// };
-// traerProducto()
-//   .then((res) => {
-//     setItem(res);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   })
-//   .finally(() => {
-//     setRecarga(false);
-//   });
