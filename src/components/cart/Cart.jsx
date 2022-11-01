@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 import "./cart.css";
 
 const Cart = () => {
-  const { cart, borrarTodo, borrarUno } = useContext(CartContext);
+  const { cart, borrarTodo, borrarUno, sumaTotal } = useContext(CartContext);
 
   if (cart.length === 0) {
     return (
@@ -30,8 +31,11 @@ const Cart = () => {
         </div>
       ))}
       <div className="precio-total">
-        <h2>Total: $0 </h2>
+        <h2>Total : ${sumaTotal()} </h2>
         <button onClick={borrarTodo}>Borrar todo el carrito</button>
+        <Link to="/chequeo" className="btn-chequeo">
+          Chequeo
+        </Link>
       </div>
     </div>
   );

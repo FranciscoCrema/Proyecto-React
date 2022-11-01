@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./item.css";
 
-// Aca esta la funcion para agregar mas cantidad de un producto o no
-
 const ItemCount = ({ stock, inicio, prueba }) => {
   const [count, setCount] = useState(1);
 

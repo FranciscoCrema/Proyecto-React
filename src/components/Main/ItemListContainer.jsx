@@ -14,9 +14,12 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const coleccionDeProd = collection(baseDeDatos, "productos");
-    const q = query(coleccionDeProd, where("categoria", "==", categoryName));
+    
+    const ubicacion = categoryName
+      ? query(coleccionDeProd, where("categoria", "==", categoryName))
+      : coleccionDeProd;
 
-    getDocs(q)
+    getDocs(ubicacion)
       .then((res) => {
         const productos = res.docs.map((prod) => {
           return {

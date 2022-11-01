@@ -15,6 +15,13 @@ const Provider = ({ children }) => {
     }
   };
 
+  const sumaTotal = () => {
+    return cart.reduce(
+      (acc, item) => (acc = acc + item.cantidad * item.precio),
+      0
+    );
+  };
+
   const sumaCantidadTodo = (prodAgregado) => {
     const carritoActualizado = cart.map((productoDelCart) => {
       if (productoDelCart.id === prodAgregado.id) {
@@ -41,7 +48,9 @@ const Provider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, borrarTodo, borrarUno }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, borrarTodo, borrarUno, sumaTotal }}
+    >
       {children}
     </CartContext.Provider>
   );

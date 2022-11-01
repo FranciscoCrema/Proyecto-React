@@ -7,6 +7,7 @@ import Cart from "./components/cart/Cart";
 import Inicio from "./components/Inicio/Inicio";
 import Contacto from "./components/Contacto/Contacto";
 import Provider from "./context/CartContext";
+import Formulario from "./components/Formulario/Formulario";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/chequeo" element={<Formulario />} />
         </Routes>
 
         <Footer />

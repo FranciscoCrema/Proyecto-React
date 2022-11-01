@@ -43,6 +43,8 @@
 }
 
 .precio-total{
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   font-size: 20px;
 }
@@ -50,4 +52,16 @@
 .precio-total button{
   width: 100px;
   height: 50px;
+}
+
+.btn-chequeo{
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 80px;
+  height: auto;
+  background-color: #324851;
+  color: #f4cc70;
 }
