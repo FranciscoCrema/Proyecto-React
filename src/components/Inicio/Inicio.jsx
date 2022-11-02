@@ -4,7 +4,7 @@ import { baseDeDatos } from "../../servicios/fireBaseConfig";
 import ItemList from "../Main/ItemList";
 import "../Main/item.css";
 
-function Inicio() {
+function Inicio({saludo}) {
   const [items, setItems] = useState([]);
   const getData = async () => {
     try {
@@ -41,9 +41,10 @@ function Inicio() {
   }, []);
 
   return (
-    <>
+    <div className="item-list-container">
+      <h3 className="text"> {saludo} </h3>
       <ItemList items={items} />
-    </>
+    </div>
   );
 }
 
