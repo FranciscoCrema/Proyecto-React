@@ -44,7 +44,7 @@ const Formulario = () => {
     return (
       <>
         <h3>Gracias por confiar en nosotros</h3>
-        <p>Su codigo de seguimiento es ${orden} </p>
+        <p>Su codigo de seguimiento es {orden} </p>
       </>
     );
   }
