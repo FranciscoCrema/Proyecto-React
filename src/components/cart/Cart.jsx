@@ -29,7 +29,7 @@ const Cart = () => {
 
           <button onClick={() => borrarUno(prod.id)}>Borrar</button>
         </div>
-      ))}
+      ))} 
       <div className="precio-total">
         <h2>Total : ${sumaTotal()} </h2>
         <button onClick={borrarTodo}>Borrar todo el carrito</button>
